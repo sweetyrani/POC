@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="EntryRendererDemo.MyPage"
+    xmlns:local="clr-namespace:EntryRendererDemo;assembly=EntryRendererDemo">
+	<ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <StackLayout>
+                  <local:MyEntry Placeholder="Email" WidthRequest="20" x:Name="txt" CustomBorderColor= "Green" ImageName="email" ErrorImageName="error"/>
+                  <Label IsVisible="false" Text="oops" TextColor="#FF0000" x:Name="errorLbl" FontSize="10"/>
+            </StackLayout>
+          <StackLayout>
+                  <local:Checkbox Color="Gray"/>
+                <local:CustomRadiobutton HeightRequest="40" Text="Hello" Color="#EF4D80"/>
+            </StackLayout>
+            <Button Text="Submit" Clicked="OnsubmitClicked"/>
+           </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
